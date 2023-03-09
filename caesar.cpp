@@ -2,6 +2,7 @@
 #include <string>
 #include "caesar.h"
 #include <cctype>
+#include "vigenere.h"
 
 // add functions here
 char shiftChar(char c, int rshift)
@@ -44,8 +45,8 @@ std::string CaesarCipher(int shift, std::string sentence)
     return newSent;
 }
 
-int main()
-{
-    std::cout << CaesarCipher(7, "Abcd Efg") << std::endl;
-    return 0;
-}
+// int main()
+// {
+//     std::cout << CaesarCipher(7, "Abcd Efg") << std::endl;
+//     return 0;
+// }

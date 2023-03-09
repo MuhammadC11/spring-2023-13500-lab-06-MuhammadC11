@@ -1,7 +1,7 @@
 #include <iostream>
 
-
-#include "funcs.h"
+#include "caesar.h"
+#include "vigenere.h"
 
 int main()
 {

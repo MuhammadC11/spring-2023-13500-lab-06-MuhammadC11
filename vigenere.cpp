@@ -61,8 +61,8 @@ std::string encryptVigenere(std::string plaintext, std::string keyword)
     return newSent;
 }
 
-int main()
-{
-    std::cout << encryptVigenere("ABCDEFGHI", "aabbcc") << std::endl;
-    return 0;
-}
+// int main()
+// {
+//     std::cout << encryptVigenere("ABCDEFGHI", "aabbcc") << std::endl;
+//     return 0;
+// }
