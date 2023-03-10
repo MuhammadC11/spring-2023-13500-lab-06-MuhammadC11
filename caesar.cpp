@@ -7,26 +7,27 @@
 // add functions here
 char shiftChar(char c, int rshift)
 {
-    if (isupper(c)) // if the character is uppercase
+    int shift = rshift % 26;
+    int num = (int)c;
+    if (num >= 65 && num < 97)
     {
-        c = c + rshift; // shift the characters value by the shift value
-        if (c > 'Z')    // if the characters ascii value is greater than "z" in ascii value after the shift..
-        {
-            c = c - 'Z' + 'A' - 1; // wrap around the alphabet first subtract the value bigger than max value which is the value for Z, then add the value for A, then subtract 1 to get the correct value. 95 - 90 + 65 - 1 = 69 which is the value for E.
-        }
+        return (char)((c - 65 + shift) % 26 + 65);
     }
-    else if (islower(c))
+
+    else if (num >= 97)
     {
-        c = c + rshift; // add the shift value to the characters ascii value
-        if (c > 'z')    // if the lowercase letters value is greater than the maximum value for lowercase letters
-        {
-            c = c - 'z' + 'a' - 1; // wrap around the alphabet first subtract the value bigger than max value which is the value for z, then add the value for a, then subtract 1 to get the correct value. 122 - 122 + 97 - 1 = 96 which is the value for a.
-        }
+        return (char)((c - 97 + shift) % 26 + 97);
     }
-    return c;
+
+    else
+    {
+        return c;
+    }
+
+    return ' ';
 }
 
-std::string CaesarCipher(int shift, std::string sentence)
+std::string encryptCaesar(std::string sentence, int shift)
 {
     std::string newSent;
     for (int i = 0; i < sentence.length(); i++) // loop through the sentence
@@ -47,6 +48,6 @@ std::string CaesarCipher(int shift, std::string sentence)
 
 // int main()
 // {
-//     std::cout << CaesarCipher(7, "Abcd Efg") << std::endl;
+//     std::cout << encryptCaesar(7, "Abcd Efg") << std::endl;
 //     return 0;
 // }
