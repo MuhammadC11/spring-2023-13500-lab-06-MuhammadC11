@@ -25,4 +25,4 @@ test-ascii.o: test-ascii.cpp
 	g++ -c -std=c++11 test-ascii.cpp
 
 clean:
-	rm -f main.o tests.o main tests caesar.o vigenere.o test-ascii.o test-ascii
+	rm -f main.o tests.o main tests caesar.o vigenere.o test-ascii.o test-ascii decrypt.o test-ascii test-ascii.o
