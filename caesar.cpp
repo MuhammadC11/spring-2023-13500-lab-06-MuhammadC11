@@ -88,7 +88,7 @@ double vDistance(std::vector<double> encryptedFreq) // create a function that ta
 std::string solve(std::string encrypted_string)
 {
     std::string decrypted_string; // create a variable to store the decrypted string
-    double minDistance = 100000;  // set the minimum distance to a large number
+    double minDistance = 100;     // set the minimum distance to a large number
     int shift = 0;                // set the shift to 0
     for (int i = 0; i < 26; i++)  // loop through the alphabet
     {
