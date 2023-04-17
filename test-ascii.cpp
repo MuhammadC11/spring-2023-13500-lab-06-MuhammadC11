@@ -12,13 +12,3 @@ void asciiValue(std::string sentence)
         std::cout << sentence[i] << " " << (int)c << std::endl; // then output the character and the ascii value of the character with a single space into it.
     }
 }
-
-int main()
-{
-    asciiValue("Hello World");
-    std::cout << std::endl;
-    asciiValue("Whats up?");
-    std::cout << std::endl;
-    asciiValue("Nothing Much!");
-    return 0;
-}
