@@ -7,6 +7,7 @@ tests: tests.o caesar.o vigenere.o decrypt.o
 
 
 caesar.o: caesar.cpp caesar.h
+	g++ -std=c++11 -c caesar.cpp -g
 	
 vigenere.o: vigenere.cpp vigenere.h
 
